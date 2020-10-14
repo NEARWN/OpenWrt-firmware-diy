@@ -128,7 +128,7 @@ jobs:
         path: ${{ env.FIRMWARE }}
 
     - name: Upload packages directory
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@main
       with:
         name: OpenWrt_bin_packages
         path: openwrt/bin/packages
