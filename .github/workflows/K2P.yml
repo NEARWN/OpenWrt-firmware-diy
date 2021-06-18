@@ -67,6 +67,7 @@ jobs:
         echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
+        echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
         $GITHUB_WORKSPACE/$DIY_P1_SH
         
     - name: Update feeds
