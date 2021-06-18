@@ -64,7 +64,6 @@ jobs:
         
     - name: Load custom feeds
       run: |
-        echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
         echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
