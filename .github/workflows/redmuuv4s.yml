@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt redmi jd-dailybonus
+name: Build OpenWrt redmi uuv+4s
 
 on:
   repository_dispatch:
@@ -25,7 +25,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/redmijd.config
+  CONFIG_FILE: config/redmuuv4s.config
   DIY_P1_SH: diy-part1.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
@@ -123,7 +123,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt phicomm redmi jd-dailybonus${{ env.FILE_DATE }}
+        name: OpenWrt phicomm redmi muu+v4s${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload packages directory
