@@ -125,7 +125,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt firmware redmi ac2100${{ env.FILE_DATE }}
+        name: OpenWrt redmi ac2100${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload packages directory
