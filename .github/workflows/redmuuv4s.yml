@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt redmi uuv+4s
+name: Build OpenWrt redmi ac2100 syncdial ipv4
 
 on:
   repository_dispatch:
@@ -123,7 +123,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt phicomm redmi muu+v4s${{ env.FILE_DATE }}
+        name: OpenWrt redmi ac2100 syncdial ipv4${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload packages directory
